@@ -1,0 +1,23 @@
+<%= form_for(@article) do |frm| %>
+
+<ul>
+	<% @article.errors.full_messages.each do |err| %>
+	<li> <%= err %></li>
+	<% end %>
+</ul>
+
+<p>
+	<%= frm.label :title %><br>
+	<%= frm.text_field :title %>
+</p>
+
+<p>
+	<%= frm.label :body %><br>
+	<%= frm.text_area :body %>
+</p>
+
+<p>
+	<%= frm.submit %>
+</p>
+
+<% end %>
