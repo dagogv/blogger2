@@ -6,6 +6,10 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+
+		# This is used to create a new comment form in the Show.html.erb file
+		@comment = Comment.new
+		@comment.article_id = @article.id
 	end
 
 	def new
