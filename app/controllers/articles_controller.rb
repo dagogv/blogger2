@@ -46,4 +46,5 @@ class ArticlesController < ApplicationController
 		flash.notice = "Article '#{@article.title}' destroyed!"
 		redirect_to articles_path
 	end
+
 end
