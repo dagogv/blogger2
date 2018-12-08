@@ -8,6 +8,11 @@
 </p>
 <br>
 
+<p>
+	<% if @article.image.exists? %>
+	<%= image_tag @article.image.url %></p>
+	<% end %>
+
 <p><h2>Article Body: <%= @article.body %></h2></p>
 <br>
 <br>
